@@ -5,14 +5,18 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Product.create!(title: 'Jura Coffee Maker',
+Product.create!(title: 'CoffeeScript',
 description:
 	%{<p>
-	The compact Jura Subito brews two cups of incredibly robust 
-	and delicious coffee in one shot.
+	CoffeeScript: Accelerated JavaScript Development is aimed 
+	at programmers who want to get a grip on this new language 
+	while improving their understanding of JavaScript. You'll learn 
+	about time-saving features like list comprehensions and splats, 
+	organize your code into modules with extensible classes, 
+	and get your feet wet with jQuery by building a fast-paced word game.
 	</p>},
-image_url: 'jura-subito-coffee-maker.jpg',
-price: 355.50)
+image_url: 'cs.jpg',
+price: 36.00)
 
 Product.create!(title: 'Programming Ruby 1.9 & 2.0',
 description:
