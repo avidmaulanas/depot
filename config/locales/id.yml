@@ -1,0 +1,73 @@
+#START:layout
+#START:main
+#START:cart
+#START:currency
+#START:checkout
+#START:flash
+id:
+
+#END:cart
+#END:checkout
+#END:flash
+#END:main
+#END:layout
+  number:
+    currency:
+      format:
+        unit:      "$"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format:    "%u%n"
+#END:currency
+
+#START:errors
+  errors:
+    template:
+      body:        "Ada masalah dengan kolom berikut:"
+      header:       
+        one:       "1 error prohibited this %{model} from being saved"
+        other:     "%{count} errors prohibited this %{model} from being saved"
+#END:errors
+
+#START:layout
+  layouts:
+    application:
+      title:       "Pragmatic Bookshelf"
+      home:        "Beranda"
+      questions:   "Pertanyaan"
+      news:        "Berita"
+      contact:     "Kontak"
+#END:layout
+
+#START:cart
+  carts:
+    cart:
+      title:       "Keranjang Belanja"
+      empty:       "Kosongkan"
+      checkout:    "Checkout"
+#END:cart
+
+#START:main
+  store:
+    index:
+      title_html:  "Pragmatic Katalog"
+      add_html:    "Tambahkan ke Keranjang"
+#END:main
+
+#START:checkout
+  orders:
+    new:
+      legend:       "Silahkan Masukkan Data Anda"
+    form:
+      name:         "Nama"
+      address_html: "Alamat"
+      email:        "E-mail"
+      pay_type:     "Pembayaran"
+      pay_prompt_html: "Pilih metode pembayaran"
+      submit:       "Memesan"
+#END:checkout
+
+#START:flash
+  thanks:          "Terima kasih atas pesanan Anda"
+#END:flash
