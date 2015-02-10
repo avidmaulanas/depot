@@ -7,6 +7,14 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
+  def statistic
+    @average = Product.average(:price)
+    @max = Product.maximum(:price)
+    @min = Product.minimum(:price)
+    @total_price = Product.sum(:price)
+    @number = Product.count
+  end
+
   # GET /products/1
   # GET /products/1.json
   def show
@@ -58,6 +66,16 @@ class ProductsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def who_bought
+    @product = Product.find(params[:id])
+    @latest_order = @product.orders.order(:updated_at).last
+    if stale?(@latest_order)
+      respond_to do |format|
+        format.atom
+      end
     end
   end
 
