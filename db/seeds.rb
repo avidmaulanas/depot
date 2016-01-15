@@ -40,3 +40,5 @@ description:
 	</p>},
 image_url: 'rtp.jpg',
 price: 25.36)
+
+User.create!(name: 'admin', password: 'admin')
