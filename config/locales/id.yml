@@ -25,7 +25,7 @@ id:
   errors:
     template:
       body:        "Ada masalah dengan kolom berikut:"
-      header:       
+      header:
         one:       "1 error prohibited this %{model} from being saved"
         other:     "%{count} errors prohibited this %{model} from being saved"
 #END:errors
